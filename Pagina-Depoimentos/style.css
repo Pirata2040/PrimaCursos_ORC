@@ -1,0 +1,65 @@
+header{
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+body{ 
+    background-image: url(imagens/fundo-figma.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-header {
+    display: flex;
+    width: 180px;
+    height: auto;
+}
+
+button{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #2563EB;
+    border-radius: 9px;
+    display: flex;
+    width: 111px;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+nav a {
+    color: #0F172A;
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.depoimentos-header{
+    color:#2563EB;
+    border-bottom-color: #2563EB;
+}
