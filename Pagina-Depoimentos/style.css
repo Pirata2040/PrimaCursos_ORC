@@ -11,6 +11,7 @@ body{
     background-image: url(imagens/fundo-figma.png);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Inter', sans-serif;
 
 }
 
@@ -43,7 +44,6 @@ button{
     cursor: pointer;
 }
 
-
 nav {
     display: flex;
     align-items: center;
@@ -63,3 +63,50 @@ nav a {
     color:#2563EB;
     border-bottom-color: #2563EB;
 }
+
+section{
+    padding: 25px 90px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.conjuntotexto{
+    width: 45%;
+}
+
+.titulo{
+    color:#2563EB;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+h1{
+    max-width: 430px;
+    text-wrap: balance;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+    color: #0F172A;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.descricao{
+    max-width: 600px;
+    color: #475569;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.imagem-depoimentos{
+    width: 50%;
+    height: auto;
+
+}
+
