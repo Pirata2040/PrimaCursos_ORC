@@ -227,3 +227,162 @@ article{
     width: 20px;
     
 }
+
+
+/* ===== MENU MOBILE: estilos base (escondido no desktop) ===== */
+.botao-menu {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background-color: #FFFFFF;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(30, 58, 138, 0.6);
+    padding: 12px 20px;
+}
+
+.menu-mobile.aberto {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.menu-card {
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    padding: 20px;
+    width: 100%;
+    max-width: 340px;
+}
+
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.menu-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #0F172A;
+}
+
+.botao-fechar {
+    width: auto;
+    height: 36px;
+    padding: 0 14px;
+    background-color: #FFFFFF;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.menu-links a {
+    display: block;
+    padding: 12px 14px;
+    color: #1E3A8A;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.menu-links a:nth-child(even) {
+    background-color: #F8FAFC;
+}
+
+/* ===== ATÉ 1000px: o header vira logo + botão de menu ===== */
+@media (max-width: 1000px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .botao-contato {
+        display: none;
+    }
+
+    .botao-menu {
+        display: flex;
+    }
+
+    .logo-header {
+        width: 140px;
+    }
+}
+
+/* ===== ATÉ 900px: layout em uma coluna ===== */
+@media (max-width: 900px) {
+    section {
+        flex-direction: column;
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .conjuntotexto {
+        width: 100%;
+    }
+
+    h1 {
+        max-width: 100%;
+        font-size: 32px;
+    }
+
+    .descricao {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .imagem-contatos {
+        width: 100%;
+    }
+
+    .conjunto2 {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+        padding: 0 20px 24px 20px;
+        gap: 24px;
+    }
+
+    .formulario {
+        height: auto;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .botao-mensagem {
+        width: 100%;
+    }
+
+    article {
+        max-height: none;
+    }
+}
