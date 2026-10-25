@@ -1,0 +1,354 @@
+/* ========== RESET E VARIÁVEIS ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul: #2563eb;
+    --azul-escuro: #1e3a8a;
+    --texto: #0f172a;
+    --texto-suave: #475569;
+    --borda: #e2e8f0;
+    --branco: #ffffff;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--texto);
+    background-color: #f4f8ff;
+    background-image: url("assets/POSSÍVEL-FUNDO.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========== BOTÕES E ETIQUETAS ========== */
+.botao {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.botao--pequeno {
+    padding: 10px 24px;
+    font-size: 13px;
+}
+
+.etiqueta {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--azul);
+}
+
+/* ========== CABEÇALHO ========== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+}
+
+.navbar__conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+}
+
+.navbar__logo img {
+    height: 48px;
+    width: auto;
+}
+
+.navbar__menu ul {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar__menu a {
+    display: block;
+    padding: 18px 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--texto);
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s;
+}
+
+.navbar__menu a:hover,
+.navbar__menu a.ativo {
+    color: var(--azul);
+}
+
+.navbar__menu a.ativo {
+    border-bottom-color: var(--azul);
+}
+
+/* ========== HERO ========== */
+.hero {
+    padding: 56px 0 72px;
+}
+
+.hero__conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero__texto h1 {
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero__texto p {
+    max-width: 440px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--texto-suave);
+    margin-bottom: 48px;
+}
+
+/* Composição visual do lado direito */
+.hero__visual {
+    position: relative;
+    height: 380px;
+}
+
+.forma {
+    position: absolute;
+}
+
+/* quadrado azul atrás do menino */
+.forma--azul {
+    top: 0;
+    left: 40px;
+    width: 190px;
+    height: 130px;
+    background-color: var(--azul);
+    border-radius: 32px;
+}
+
+/* painel azul escuro à direita */
+.forma--escura {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 210px;
+    background-color: var(--azul-escuro);
+    border-radius: 32px 32px 32px 0;
+}
+
+.hero__menino {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 90%;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: bottom left;
+}
+
+.cartao-flutuante {
+    position: absolute;
+    top: 130px;
+    right: 28px;
+    width: 220px;
+    padding: 18px 20px;
+    background-color: var(--branco);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+}
+
+.cartao-flutuante h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--azul-escuro);
+    margin-bottom: 8px;
+}
+
+.cartao-flutuante li {
+    position: relative;
+    padding-left: 12px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--texto-suave);
+}
+
+.cartao-flutuante li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+/* ========== POR QUE EXISTIMOS ========== */
+.porque {
+    padding: 24px 0 56px;
+}
+
+.porque h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.porque__subtitulo {
+    font-size: 14px;
+    color: var(--texto-suave);
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    padding: 28px 24px 32px;
+    min-height: 210px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+}
+
+.card__icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 28px;
+    color: var(--azul);
+    background-color: #eff4ff;
+    border-radius: 50%;
+}
+
+.card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--texto-suave);
+}
+
+/* ========== FAIXA FINAL ========== */
+.faixa {
+    padding-bottom: 64px;
+}
+
+.faixa__caixa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 32px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+}
+
+.faixa__caixa h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--azul-escuro);
+    margin-bottom: 6px;
+}
+
+.faixa__caixa p {
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 900px) {
+    .navbar__menu {
+        display: none;
+    }
+
+    .hero__conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__visual {
+        max-width: 460px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .faixa__caixa {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero__texto h1 {
+        font-size: 34px;
+    }
+
+    .porque h2 {
+        font-size: 24px;
+    }
+}
