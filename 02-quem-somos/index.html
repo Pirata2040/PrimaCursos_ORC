@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quem Somos | Prisma Cursos</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -14,14 +16,14 @@
 <!-- CABEÇALHO -->
 <header class="navbar">
     <div class="navbar__conteudo">
-        <a href="index.html" class="navbar__logo">
+        <a href="../01-homepage/index.html" class="navbar__logo">
             <img src="assets/logo.png" alt="Prisma Cursos">
         </a>
 
-        <nav class="navbar__menu">
+        <nav class="navbar__menu" id="menu">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#" class="ativo">Quem Somos</a></li>
+                <li><a href="../01-homepage/index.html">Início</a></li>
+                <li><a href="index.html" class="ativo">Quem Somos</a></li>
                 <li><a href="../03-cursos/index.html">Cursos</a></li>
                 <li><a href="#">Depoimentos</a></li>
                 <li><a href="#">Contato</a></li>
@@ -29,6 +31,9 @@
         </nav>
 
         <a href="#" class="botao botao--pequeno">Contato</a>
+
+        <!-- botão do menu no celular (o script.js faz ele funcionar) -->
+        <button class="navbar__toggle" id="botao-menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
     </div>
 </header>
 
@@ -123,5 +128,6 @@
 
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>

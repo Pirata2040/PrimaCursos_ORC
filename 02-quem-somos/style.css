@@ -20,6 +20,7 @@ html {
 
 body {
     min-height: 100vh;
+    overflow-x: hidden; /* evita rolagem lateral no celular */
     font-family: 'Inter', Arial, sans-serif;
     color: var(--texto);
     background-color: #f4f8ff;
@@ -134,6 +135,16 @@ h1, h2, h3 {
     border-bottom-color: var(--azul);
 }
 
+/* botão ☰: só aparece no celular */
+.navbar__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: var(--texto);
+    cursor: pointer;
+}
+
 /* ========== HERO ========== */
 .hero {
     padding: 56px 0 72px;
@@ -161,7 +172,7 @@ h1, h2, h3 {
     margin-bottom: 48px;
 }
 
-/* Composição visual do lado direito */
+/* composição visual do lado direito */
 .hero__visual {
     position: relative;
     height: 380px;
@@ -171,7 +182,6 @@ h1, h2, h3 {
     position: absolute;
 }
 
-/* quadrado azul atrás do menino */
 .forma--azul {
     top: 0;
     left: 40px;
@@ -181,7 +191,6 @@ h1, h2, h3 {
     border-radius: 32px;
 }
 
-/* painel azul escuro à direita */
 .forma--escura {
     top: 0;
     right: 0;
@@ -195,7 +204,7 @@ h1, h2, h3 {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 90%;
+    height: 100%;
     width: auto;
     max-width: none;
     object-fit: contain;
@@ -247,6 +256,7 @@ h1, h2, h3 {
 
 .porque__subtitulo {
     font-size: 14px;
+    line-height: 1.6;
     color: var(--texto-suave);
     margin-bottom: 40px;
 }
@@ -317,24 +327,70 @@ h1, h2, h3 {
     color: var(--texto-suave);
 }
 
-/* ========== RESPONSIVO ========== */
+/* animação de entrada (o script.js adiciona as classes) */
+.aparecer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.aparecer.visivel {
+    opacity: 1;
+    transform: none;
+}
+
+/* ========== RESPONSIVO: TABLET E CELULAR ========== */
 @media (max-width: 900px) {
+    .navbar__toggle {
+        display: block;
+    }
+
+    /* o menu vira uma lista que abre embaixo do cabeçalho */
     .navbar__menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--branco);
+        border-bottom: 1px solid var(--borda);
+    }
+
+    .navbar__menu.aberto {
+        display: block;
+    }
+
+    .navbar__menu ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 24px 16px;
+    }
+
+    .navbar__menu a {
+        padding: 12px 0;
+        border-bottom: none;
     }
 
     .hero__conteudo {
         grid-template-columns: 1fr;
     }
 
+    .hero__texto p {
+        margin-bottom: 32px;
+    }
+
     .hero__visual {
         max-width: 460px;
-        margin: 0 auto;
         width: 100%;
+        margin: 0 auto;
     }
 
     .cards {
         grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 0;
     }
 
     .faixa__caixa {
@@ -343,12 +399,79 @@ h1, h2, h3 {
     }
 }
 
+/* ========== RESPONSIVO: CELULAR PEQUENO ========== */
 @media (max-width: 520px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .navbar__conteudo {
+        padding: 10px 16px;
+    }
+
+    .navbar__logo img {
+        height: 40px;
+    }
+
+    /* o "Contato" já está dentro do menu ☰ */
+    .botao--pequeno {
+        display: none;
+    }
+
+    .hero {
+        padding: 32px 0 48px;
+    }
+
     .hero__texto h1 {
         font-size: 34px;
     }
 
+    /* a composição do menino encolhe junto com a tela */
+    .hero__visual {
+        height: 300px;
+    }
+
+    .forma--azul {
+        left: 20px;
+        width: 150px;
+        height: 105px;
+        border-radius: 24px;
+    }
+
+    .forma--escura {
+        width: 140px;
+        border-radius: 24px 24px 24px 0;
+    }
+
+    .cartao-flutuante {
+        top: 120px;
+        right: 8px;
+        width: 165px;
+        padding: 12px 14px;
+    }
+
+    .cartao-flutuante h3 {
+        font-size: 12px;
+    }
+
+    .cartao-flutuante li {
+        font-size: 11px;
+    }
+
     .porque h2 {
         font-size: 24px;
+    }
+
+    .faixa__caixa {
+        padding: 24px 20px;
+    }
+
+    .faixa__caixa h2 {
+        font-size: 18px;
+    }
+
+    .faixa__caixa .botao {
+        width: 100%;
+        text-align: center;
     }
 }

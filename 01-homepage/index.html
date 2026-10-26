@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início | Prisma Cursos</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CABEÇALHO -->
+<header class="navbar">
+    <div class="navbar__conteudo">
+        <a href="index.html" class="navbar__logo">
+            <img src="assets/logo.png" alt="Prisma Cursos">
+        </a>
+
+        <nav class="navbar__menu" id="menu">
+            <ul>
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="../02-quem-somos/index.html">Quem Somos</a></li>
+                <li><a href="../03-cursos/index.html">Cursos</a></li>
+                <li><a href="#">Depoimentos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="botao botao--pequeno">Contato</a>
+
+        <!-- botão do menu no celular (o script.js faz ele funcionar) -->
+        <button class="navbar__toggle" id="botao-menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero__conteudo">
+
+            <div class="hero__texto">
+                <span class="etiqueta">Seu futuro começa aqui</span>
+                <h1>Mais do que cursos,<br>é o seu <span class="destaque">próximo nível.</span></h1>
+                <p>
+                    Na Prisma Cursos, você encontra a formação certa para
+                    transformar seus objetivos em conquistas. Aprenda com
+                    profissionais experientes, no seu ritmo, e construa o futuro
+                    que você merece.
+                </p>
+
+                <div class="hero__quiz">
+                    <p>
+                        Temos um quiz preparado pra você descobrir qual curso
+                        seria perfeito para seu perfil.<br>
+                        Preparado para descobrir?
+                    </p>
+                    <a href="#" class="botao">Quero fazer o QUIZ &rarr;</a>
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <div class="forma forma--escura-esq"></div>
+                <div class="forma forma--azul"></div>
+                <div class="forma forma--escura-dir"></div>
+                <img src="assets/menino.png" alt="Estudante da Prisma Cursos" class="hero__menino">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="beneficios">
+        <div class="container beneficios__lista">
+
+            <article class="beneficio">
+                <div class="beneficio__icone">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><line x1="22" y1="10" x2="22" y2="16"/></svg>
+                </div>
+                <h3>Professores qualificados</h3>
+                <p>Aprenda com quem realmente vive o mercado.</p>
+            </article>
+
+            <article class="beneficio">
+                <div class="beneficio__icone">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <h3>Aulas 100% online</h3>
+                <p>Estude de onde quiser, no seu ritmo.</p>
+            </article>
+
+            <article class="beneficio">
+                <div class="beneficio__icone">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                </div>
+                <h3>Certificado reconhecido</h3>
+                <p>Valide seus conhecimentos e aumente suas oportunidades.</p>
+            </article>
+
+            <article class="beneficio">
+                <div class="beneficio__icone">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3>Suporte ao aluno</h3>
+                <p>Tire suas dúvidas e conte com a nossa equipe.</p>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

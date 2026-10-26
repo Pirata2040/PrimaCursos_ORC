@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos | Prisma Cursos</title>
 
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -14,21 +15,24 @@
 <!-- CABEÇALHO -->
 <header class="navbar">
     <div class="navbar__conteudo">
-        <a href="#" class="navbar__logo">
+        <a href="../01-homepage/index.html" class="navbar__logo">
             <img src="assets/logo.png" alt="Prisma Cursos">
         </a>
 
-        <nav class="navbar__menu">
+        <nav class="navbar__menu" id="menu">
             <ul>
-                <li><a href="#">Início</a></li>
+                <li><a href="../01-homepage/index.html">Início</a></li>
                 <li><a href="../02-quem-somos/index.html">Quem Somos</a></li>
-                <li><a href="#" class="ativo">Cursos</a></li>
+                <li><a href="index.html" class="ativo">Cursos</a></li>
                 <li><a href="#">Depoimentos</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
 
         <a href="#" class="botao botao--pequeno">Contato</a>
+
+        <!-- botão do menu no celular (o script.js faz ele funcionar) -->
+        <button class="navbar__toggle" id="botao-menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
     </div>
 </header>
 
@@ -77,11 +81,7 @@
                 <article class="curso">
                     <div class="curso__topo">
                         <div class="curso__icone">
-                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="7 7 2 12 7 17"/>
-                                <polyline points="17 7 22 12 17 17"/>
-                                <line x1="13.5" y1="5" x2="10.5" y2="19"/>
-                            </svg>
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 7 2 12 7 17"/><polyline points="17 7 22 12 17 17"/><line x1="13.5" y1="5" x2="10.5" y2="19"/></svg>
                         </div>
                         <div class="curso__bloco"></div>
                     </div>
@@ -143,5 +143,6 @@
 
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>
