@@ -1,0 +1,364 @@
+header{
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+body{ 
+    background-image: url(imagens/fundo-figma.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-header {
+    display: flex;
+    width: 180px;
+    height: auto;
+}
+
+button{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #2563EB;
+    border-radius: 9px;
+    display: flex;
+    width: 111px;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+nav a {
+    color: #0F172A;
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.depoimentos-header{
+    color:#2563EB;
+    border-bottom-color: #2563EB;
+}
+
+section{
+    padding: 25px 90px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.conjuntotexto{
+    width: 45%;
+}
+
+.titulo{
+    color:#2563EB;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+h1{
+    max-width: 430px;
+    text-wrap: balance;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+    color: #0F172A;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.descricao{
+    max-width: 600px;
+    color: #475569;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.imagem-depoimentos{
+    width: 50%;
+    height: auto;
+
+}
+
+.conjunto2{
+    padding: 25px 90px;
+}
+
+.titulo2{
+    color:#2563EB;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+
+h2{
+    font-size: 30px;
+    text-wrap: balance;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;    
+}
+
+.descricao2{
+    color: #475569;
+    font-size: 16px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+}
+.balao{
+    border-radius: 14px;
+    border: 1px solid #E2E8F0;
+    background: #FFF;
+    min-height: 310px;
+}
+
+.balao-topo{
+    display: flex;
+    justify-content: left;
+    padding: 23px 30px;
+    gap: 20px;
+}
+.aspas{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F1F5F9;
+    color: #2563EB;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estrela{
+    color: #F2C430;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.conjunto3{
+    padding: 0px 30px;
+}
+
+.nome{
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    padding-bottom: 5px;
+}
+
+.curso{
+    font-size: 14px;
+    color: #2563EB;
+    padding-bottom: 10px;
+}
+
+.feedback{
+   font-size: 19px; 
+   letter-spacing: 0.5px;
+   color: #475569;
+}
+
+/* ===== MENU MOBILE: estilos base (escondido no desktop) ===== */
+.botao-menu {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background-color: #FFFFFF;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    background-color: transparent;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding: 12px 20px;
+}
+
+.menu-mobile.aberto {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.menu-card {
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    padding: 20px;
+    width: 100%;
+    max-width: 340px;
+}
+
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.menu-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #0F172A;
+}
+
+.botao-fechar {
+    height: 36px;
+    padding: 0 14px;
+    background-color: #FFFFFF;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.menu-links a {
+    display: block;
+    padding: 12px 14px;
+    color: #1E3A8A;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.menu-links a:nth-child(even) {
+    background-color: #F8FAFC;
+}
+
+/* ===== ATÉ 1000px: o header vira logo + botão de menu ===== */
+@media (max-width: 1000px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .botao-contato {
+        display: none;
+    }
+
+    .botao-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-header {
+        width: 140px;
+    }
+}
+
+/* ===== ATÉ 900px: layout em uma coluna + carrossel ===== */
+@media (max-width: 900px) {
+    section {
+        flex-direction: column;
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .conjuntotexto {
+        width: 100%;
+    }
+
+    h1 {
+        max-width: 100%;
+        font-size: 32px;
+    }
+
+    .descricao {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .imagem-depoimentos {
+        width: 100%;
+    }
+
+    .conjunto2 {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .cards {
+        display: flex;
+        gap: 16px;
+        margin-top: 24px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .balao {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        min-height: 0;
+    }
+
+    .balao-topo {
+        padding: 20px 20px 12px 20px;
+    }
+
+    .conjunto3 {
+        padding: 0 20px 20px 20px;
+    }
+
+    .feedback {
+        font-size: 17px;
+    }
+}
+
+
