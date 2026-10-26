@@ -250,7 +250,7 @@ article{
     bottom: 0;
     left: 0;
     z-index: 10;
-    background-color: rgba(30, 58, 138, 0.6);
+    background-color: transparent;
     padding: 12px 20px;
 }
 
