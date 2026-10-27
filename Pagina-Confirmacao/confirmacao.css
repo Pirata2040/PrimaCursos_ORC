@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(imagens/fundo-figma.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.logo-header {
+    display: flex;
+    width: 180px;
+    height: auto;
+}
+
+.botao-contato {
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #2563EB;
+    border-radius: 9px;
+    display: flex;
+    width: 111px;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+nav a {
+    color: #0F172A;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.contato-header {
+    color: #2563EB;
+    border-bottom-color: #2563EB;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.balao1 {
+    width: 50%;
+    padding: 48px 32px;
+    background-color: #FFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circulo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #F1F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.circulo img {
+    width: 26px;
+    height: auto;
+}
+
+.rotulo {
+    color: #2563EB;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.titulo-confirmacao {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 1.1;
+    color: #0F172A;
+    max-width: 450px;
+    margin-bottom: 14px;
+}
+
+.texto-confirmacao {
+    color: #475569;
+    font-size: 16px;
+    max-width: 420px;
+    margin-bottom: 28px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    padding: 0 28px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.botao-principal {
+    background-color: #2563EB;
+    color: #FFF;
+}
+
+.botao-secundario {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    color: #2563EB;
+}
+
+/* ===== MENU MOBILE (escondido no desktop) ===== */
+.botao-menu {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background-color: #FFFFFF;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+
+    padding: 12px 20px;
+}
+
+.menu-mobile.aberto {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.menu-card {
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    padding: 20px;
+    width: 100%;
+    max-width: 340px;
+}
+
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.menu-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #0F172A;
+}
+
+.botao-fechar {
+    height: 36px;
+    padding: 0 14px;
+    background-color: #FFFFFF;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.menu-links a {
+    display: block;
+    padding: 12px 14px;
+    color: #1E3A8A;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.menu-links a:nth-child(even) {
+    background-color: #F8FAFC;
+}
+
+/* ===== ATÉ 1000px: header vira logo + botão de menu ===== */
+@media (max-width: 1000px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .botao-contato {
+        display: none;
+    }
+
+    .botao-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-header {
+        width: 140px;
+    }
+}
+
+/* ===== ATÉ 900px: card ocupa a largura toda ===== */
+@media (max-width: 900px) {
+    .balao1 {
+        width: 100%;
+        padding: 32px 20px;
+    }
+
+    .titulo-confirmacao {
+        font-size: 32px;
+    }
+
+    .botoes {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .botao {
+        width: 100%;
+    }
+}
+
+/* Ajustes de integração: navbar persistente e botões navegáveis */
+body {color:#0F172A;overflow-x:hidden}
+body > header {position:sticky;top:0;z-index:50}
+.logo-link{display:inline-flex;align-items:center}
+a.botao-contato{background:#2563EB;color:white;border-radius:9px;min-width:111px;min-height:46px;display:flex;align-items:center;justify-content:center;font:500 14px Inter,sans-serif;text-decoration:none}
+:focus-visible{outline:3px solid #7C3AED;outline-offset:3px}

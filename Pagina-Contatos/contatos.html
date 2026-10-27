@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="contatos.css" rel="stylesheet"/>
+<title>Contato</title>
+</head>
+<body>
+<header>
+<a class="logo-link" href="../index.html"><img alt="Logo do site" class="logo-header" src="imagens/Logo Prisma Cursos.png"/></a>
+<nav>
+<a href="../index.html">Início</a>
+<a href="../02-quem-somos/index.html">Quem somos</a>
+<a href="../03-cursos/index.html">Cursos</a>
+<a href="../Pagina-Depoimentos/depoimentos.html">Depoimentos</a>
+<a class="contatos-header" href="../Pagina-Contatos/contatos.html">Contato</a>
+</nav>
+<a class="botao-contato" href="../Pagina-Contatos/contatos.html" role="link">Contato</a>
+<button aria-label="Abrir menu" class="botao-menu">☰</button>
+</header>
+<div class="menu-mobile">
+<div class="menu-card">
+<div class="menu-topo">
+<span class="menu-titulo">Navegação</span>
+<button class="botao-fechar">Fechar ×</button>
+</div>
+<div class="menu-links">
+<a href="../index.html">Início</a>
+<a href="../02-quem-somos/index.html">Quem Somos</a>
+<a href="../03-cursos/index.html">Cursos</a>
+<a href="../Pagina-Depoimentos/depoimentos.html">Depoimentos</a>
+<a href="../Pagina-Contatos/contatos.html">Contato</a>
+</div>
+</div>
+</div>
+<main>
+<section>
+<div class="conjuntotexto">
+<p class="titulo">CONTATO</p>
+<h1>Vamos conversar sobre o seu futuro?</h1>
+<p class="descricao">
+            Tire dúvidas sobre os cursos, o ensino híbrido e as formas de
+            ingresso. Nossa equipe responde você.
+          </p>
+<ul>
+<li>✓ Resposta rápida</li>
+<li>✓ Atendimento humano</li>
+<li>✓ Online e presencial</li>
+</ul>
+</div>
+<img alt="imagem depoimentos" class="imagem-contatos" src="imagens/imagem-contatos-melhorada.png">
+</img></section>
+<div class="conjunto2">
+<p class="titulo2">FALE CONOSCO</p>
+<h2>Envie sua mensagem</h2>
+<p class="descricao2">
+          Preencha o formulário ou use um dos canais ao lado.
+        </p>
+</div>
+<div class="contato-conteudo">
+<form class="formulario" id="prisma-formulario" novalidate="novalidate">
+<div class="linha">
+<div class="campo">
+<label for="nome">Nome</label>
+<input id="nome" name="nome" placeholder="Seu nome completo" required="required" type="text"/>
+</div>
+<div class="campo">
+<label for="email">E-mail</label>
+<input id="email" name="email" placeholder="nome@gmail.com" required="required" type="email"/>
+</div>
+</div>
+<div class="campo">
+<label for="curso">Curso de interesse</label>
+<select class="curso" id="curso" name="curso">
+<option value="">Selecione um curso</option>
+<option value="web">Desenvolvimento Web</option>
+<option value="ux">UX/UI Design</option>
+<option value="projetos">Gestão de Projetos</option>
+</select>
+</div>
+<label for="mensagem">Mensagem</label>
+<textarea class="mensagem" id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required="required"></textarea>
+<button class="botao-mensagem">Enviar Mensagem</button>
+<p aria-live="polite" class="aviso-formulario" id="aviso-formulario" role="status"></p><p class="nota-envio">Neste protótipo estático, o envio abre seu aplicativo de e-mail. Confirme o envio nele para que a mensagem seja realmente transmitida.</p></form>
+<div class="canais">
+<article>
+<div class="balao-canal">
+<img alt="icone carta" class="icones" src="imagens/cartinha.svg"/>
+</div>
+<div class="canal-texto">
+<h3 class="titulo-canal">E-mail</h3>
+<p>contato@prismacursos.com</p>
+</div>
+</article>
+<article>
+<div class="balao-canal">
+<img alt="icone telefone" class="icones" src="imagens/phone.svg"/>
+</div>
+<div class="canal-texto">
+<h3 class="titulo-canal">Telefone</h3>
+<p>(61) 99872-1467</p>
+</div>
+</article>
+<article>
+<div class="balao-canal">
+<img alt="icone maps" class="icones" src="imagens/maps.svg"/>
+</div>
+<div class="canal-texto">
+<h3 class="titulo-canal">Localização</h3>
+<p>Setor Central, Gama - DF, Brasil</p>
+</div>
+</article>
+<article class="horario">
+<div class="balao-canal">
+<img alt="icone relogio" class="icones" src="imagens/relogio.svg"/>
+</div>
+<div class="canal-texto">
+<h3 class="titulo-canal">Horário</h3>
+<p>Seg a sex, 8h às 18h</p>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer></footer>
+<script src="contatos.js"></script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+/* ========== RESET E VARIÁVEIS ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul: #2563eb;
+    --azul-escuro: #1e3a8a;
+    --texto: #0f172a;
+    --texto-suave: #475569;
+    --borda: #e2e8f0;
+    --branco: #ffffff;
+    --cinza-claro: #f8fafc;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden; /* evita rolagem lateral no celular */
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--texto);
+    background-color: #f4f8ff;
+    background-image: url("assets/POSSÍVEL-FUNDO.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========== BOTÕES E ETIQUETAS ========== */
+.botao {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.botao--pequeno {
+    padding: 10px 24px;
+    font-size: 13px;
+}
+
+.etiqueta {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--azul);
+}
+
+/* ========== CABEÇALHO ========== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+}
+
+.navbar__conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+}
+
+.navbar__logo img {
+    height: 48px;
+    width: auto;
+}
+
+.navbar__menu ul {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar__menu a {
+    display: block;
+    padding: 18px 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--texto);
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s;
+}
+
+.navbar__menu a:hover,
+.navbar__menu a.ativo {
+    color: var(--azul);
+}
+
+.navbar__menu a.ativo {
+    border-bottom-color: var(--azul);
+}
+
+/* botão ☰: só aparece no celular */
+.navbar__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: var(--texto);
+    cursor: pointer;
+}
+
+/* ========== HERO ========== */
+.hero {
+    padding: 56px 0;
+}
+
+.hero__conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero__texto h1 {
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero__texto p {
+    max-width: 440px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--texto-suave);
+    margin-bottom: 32px;
+}
+
+/* lista de destaques com "check" */
+.hero__destaques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+.hero__destaques li {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--azul-escuro);
+}
+
+.hero__destaques li::before {
+    content: "✓";
+    margin-right: 6px;
+}
+
+/* composição visual do lado direito */
+.hero__visual {
+    position: relative;
+    height: 340px;
+    overflow: hidden; /* corta o menino na linha da base */
+}
+
+.forma {
+    position: absolute;
+}
+
+/* o quadrado azul desce junto com o menino (top = quanto o menino desceu) */
+.forma--azul {
+    top: 30px;
+    left: 40px;
+    width: 190px;
+    height: 130px;
+    background-color: var(--azul);
+    border-radius: 32px;
+}
+
+.forma--escura {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 190px;
+    background-color: var(--azul-escuro);
+    border-radius: 32px 32px 32px 0;
+}
+
+.hero__menino {
+    position: absolute;
+    bottom: -30px; /* valor negativo faz o menino descer */
+    left: 0;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: bottom left;
+}
+
+/* ========== CURSOS EM DESTAQUE ========== */
+.cursos {
+    padding: 16px 0 64px;
+}
+
+.cursos h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.cursos__subtitulo {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--texto-suave);
+    margin-bottom: 32px;
+}
+
+.cursos__lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.curso {
+    padding: 12px 12px 28px;
+    min-height: 300px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.curso:hover,
+.curso.visivel:hover {
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+    transform: translateY(-2px);
+}
+
+/* parte de cima do cartão (ícone + bloco azul) */
+.curso__topo {
+    display: flex;
+    height: 82px;
+    margin-bottom: 20px;
+    background-color: var(--cinza-claro);
+    border-radius: 10px;
+}
+
+.curso__icone {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul);
+}
+
+.curso__bloco {
+    width: 106px;
+    background-color: var(--azul-escuro);
+    border-radius: 12px;
+}
+
+.curso h3,
+.curso p,
+.curso__itens {
+    padding: 0 4px;
+}
+
+.curso h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.curso p {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--texto-suave);
+    margin-bottom: 12px;
+}
+
+.curso__itens li {
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--azul-escuro);
+}
+
+.curso__itens li::before {
+    content: "✓";
+    margin-right: 6px;
+}
+
+/* ========== FAIXA DO QUIZ ========== */
+.faixa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 32px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+}
+
+.faixa h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.faixa p {
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+
+/* animação de entrada (o script.js adiciona as classes) */
+.aparecer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.2s;
+}
+
+.aparecer.visivel {
+    opacity: 1;
+    transform: none;
+}
+
+/* ========== RESPONSIVO: TABLET E CELULAR ========== */
+@media (max-width: 900px) {
+    .navbar__toggle {
+        display: block;
+    }
+
+    /* o menu vira uma lista que abre embaixo do cabeçalho */
+    .navbar__menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--branco);
+        border-bottom: 1px solid var(--borda);
+    }
+
+    .navbar__menu.aberto {
+        display: block;
+    }
+
+    .navbar__menu ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 24px 16px;
+    }
+
+    .navbar__menu a {
+        padding: 12px 0;
+        border-bottom: none;
+    }
+
+    .hero__conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__visual {
+        max-width: 460px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .cursos__lista {
+        grid-template-columns: 1fr;
+    }
+
+    .curso {
+        min-height: 0;
+    }
+
+    .faixa {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ========== RESPONSIVO: CELULAR PEQUENO ========== */
+@media (max-width: 520px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .navbar__conteudo {
+        padding: 10px 16px;
+    }
+
+    .navbar__logo img {
+        height: 40px;
+    }
+
+    /* o "Contato" já está dentro do menu ☰ */
+    .botao--pequeno {
+        display: none;
+    }
+
+    .hero {
+        padding: 32px 0 40px;
+    }
+
+    .hero__texto h1 {
+        font-size: 34px;
+    }
+
+    /* a composição do menino encolhe junto com a tela */
+    .hero__visual {
+        height: 280px;
+    }
+
+    .forma--azul {
+        top: 24px;
+        left: 20px;
+        width: 150px;
+        height: 105px;
+        border-radius: 24px;
+    }
+
+    .forma--escura {
+        width: 130px;
+        border-radius: 24px 24px 24px 0;
+    }
+
+    .hero__menino {
+        bottom: -24px;
+    }
+
+    .cursos h2 {
+        font-size: 24px;
+    }
+
+    .faixa {
+        padding: 24px 20px;
+    }
+
+    .faixa .botao {
+        width: 100%;
+        text-align: center;
+    }
+}
+.curso{scroll-margin-top:98px}.curso__detalhes{display:inline-block;margin-top:15px;color:#2563EB;text-decoration:underline;font-weight:600;font-size:14px}
