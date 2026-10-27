@@ -1,1 +1,98 @@
+<!DOCTYPE html>
 
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Início | Prisma Cursos</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="01-homepage/style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- CABEÇALHO -->
+<header class="navbar">
+<div class="navbar__conteudo">
+<a class="navbar__logo" href="index.html">
+<img alt="Prisma Cursos" src="01-homepage/assets/logo.png"/>
+</a>
+<nav class="navbar__menu" id="menu">
+<ul>
+<li><a class="ativo" href="index.html">Início</a></li>
+<li><a href="02-quem-somos/index.html">Quem Somos</a></li>
+<li><a href="03-cursos/index.html">Cursos</a></li>
+<li><a href="Pagina-Depoimentos/depoimentos.html">Depoimentos</a></li>
+<li><a href="Pagina-Contatos/contatos.html">Contato</a></li>
+</ul>
+</nav>
+<a class="botao botao--pequeno" href="Pagina-Contatos/contatos.html">Contato</a>
+<!-- botão do menu no celular (o script.js faz ele funcionar) -->
+<button aria-controls="menu" aria-expanded="false" aria-label="Abrir menu" class="navbar__toggle" id="botao-menu">☰</button>
+</div>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero">
+<div class="container hero__conteudo">
+<div class="hero__texto">
+<span class="etiqueta">Seu futuro começa aqui</span>
+<h1>Mais do que cursos,<br/>é o seu <span class="destaque">próximo nível.</span></h1>
+<p>
+                    Na Prisma Cursos, você encontra a formação certa para
+                    transformar seus objetivos em conquistas. Aprenda com
+                    profissionais experientes, no seu ritmo, e construa o futuro
+                    que você merece.
+                </p>
+<div class="hero__quiz">
+<p>
+                        Temos um quiz preparado pra você descobrir qual curso
+                        seria perfeito para seu perfil.<br/>
+                        Preparado para descobrir?
+                    </p>
+<a class="botao" href="quiz/index.html">Quero fazer o QUIZ →</a>
+</div>
+</div>
+<div class="hero__visual">
+<div class="forma forma--escura-esq"></div>
+<div class="forma forma--azul"></div>
+<div class="forma forma--escura-dir"></div>
+<img alt="Estudante da Prisma Cursos" class="hero__menino" src="01-homepage/assets/menino.png"/>
+</div>
+</div>
+</section>
+<!-- BENEFÍCIOS -->
+<section class="beneficios">
+<div class="container beneficios__lista">
+<article class="beneficio">
+<div class="beneficio__icone">
+<svg fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="30"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path><line x1="22" x2="22" y1="10" y2="16"></line></svg>
+</div>
+<h3>Professores qualificados</h3>
+<p>Aprenda com quem realmente vive o mercado.</p>
+</article>
+<article class="beneficio">
+<div class="beneficio__icone">
+<svg fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="30"><rect height="14" rx="2" width="20" x="2" y="3"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
+</div>
+<h3>Aulas online e presenciais</h3>
+<p>Aprenda com flexibilidade no modelo híbrido.</p>
+</article>
+<article class="beneficio">
+<div class="beneficio__icone">
+<svg fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="30"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+</div>
+<h3>Aprendizado prático</h3>
+<p>Desenvolva habilidades para novos desafios profissionais.</p>
+</article>
+<article class="beneficio">
+<div class="beneficio__icone">
+<svg fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="30"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+</div>
+<h3>Suporte ao aluno</h3>
+<p>Tire suas dúvidas e conte com a nossa equipe.</p>
+</article>
+</div>
+</section><section class="home-courses"><div class="container"><span class="etiqueta">Conheça nossas opções</span><h2>Nossos cursos em destaque</h2><p>Formação prática e flexível nas áreas de tecnologia, design e gestão.</p><div class="home-courses__grid"><a class="home-course" href="03-cursos/index.html#curso-web"><span aria-hidden="true">&lt;/&gt;</span><h3>Desenvolvimento Web</h3><p>Aprenda a construir soluções digitais.</p></a><a class="home-course" href="03-cursos/index.html#curso-design"><span aria-hidden="true">✎</span><h3>UX/UI Design</h3><p>Crie interfaces e experiências digitais.</p></a><a class="home-course" href="03-cursos/index.html#curso-gestao"><span aria-hidden="true">▤</span><h3>Gestão de Projetos</h3><p>Planeje projetos e organize equipes.</p></a></div></div></section>
+</main>
+<script src="01-homepage/script.js"></script>
+</body>
+</html>

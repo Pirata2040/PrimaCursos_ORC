@@ -1,0 +1,18 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz - Prisma Cursos</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../01-homepage/style.css"><link rel="stylesheet" href="quiz.css"></head><body><header class="navbar"><div class="navbar__conteudo"><a href="../index.html" class="navbar__logo"><img src="../01-homepage/assets/logo.png" alt="Prisma Cursos"></a><nav class="navbar__menu" id="menu" aria-label="Navegação principal"><ul><li><a href="../index.html">Início</a></li><li><a href="../02-quem-somos/index.html">Quem Somos</a></li><li><a href="../03-cursos/index.html">Cursos</a></li><li><a href="../Pagina-Depoimentos/depoimentos.html">Depoimentos</a></li><li><a href="../Pagina-Contatos/contatos.html">Contato</a></li></ul></nav><a href="../Pagina-Contatos/contatos.html" class="botao botao--pequeno">Contato</a><button class="navbar__toggle" id="botao-menu" aria-controls="menu" aria-label="Abrir menu" aria-expanded="false">&#9776;</button></div></header><main><!-- QUIZ PRISMA CURSOS: cole esta seção dentro de <main>, no local desejado. -->
+<section id="quiz" class="pcq-section" aria-labelledby="pcq-title">
+  <div class="pcq-container">
+    <header class="pcq-section-header">
+      <span class="pcq-eyebrow">QUIZ DE GAMIFICAÇÃO</span>
+      <h2 id="pcq-title">Descubra o curso ideal para você</h2>
+      <p>Responda a três perguntas e descubra qual curso mais combina com seus interesses.</p>
+    </header>
+
+    <div class="pcq-panel">
+      <!-- O JavaScript exibe introdução, perguntas e resultado aqui. -->
+      <div id="pcq-screen" class="pcq-screen"></div>
+      <p id="pcq-status" class="pcq-sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+  </div>
+</section>
+<!-- FIM DO QUIZ -->
+</main><script src="../01-homepage/script.js" defer></script><script src="quiz.js" defer></script></body></html>

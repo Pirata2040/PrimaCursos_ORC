@@ -1,0 +1,387 @@
+/* ========== RESET E VARIÁVEIS ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul: #2563eb;
+    --azul-escuro: #1e3a8a;
+    --texto: #0f172a;
+    --texto-suave: #475569;
+    --borda: #e2e8f0;
+    --branco: #ffffff;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--texto);
+    background-color: #f4f8ff;
+    background-image: url("assets/POSSÍVEL-FUNDO.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========== BOTÕES E ETIQUETAS ========== */
+.botao {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.botao--pequeno {
+    padding: 10px 24px;
+    font-size: 13px;
+}
+
+.etiqueta {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--azul);
+}
+
+/* ========== CABEÇALHO ========== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+}
+
+.navbar__conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+}
+
+.navbar__logo img {
+    height: 48px;
+    width: auto;
+}
+
+.navbar__menu ul {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar__menu a {
+    display: block;
+    padding: 18px 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--texto);
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s;
+}
+
+.navbar__menu a:hover,
+.navbar__menu a.ativo {
+    color: var(--azul);
+}
+
+.navbar__menu a.ativo {
+    border-bottom-color: var(--azul);
+}
+
+/* botão do menu: só aparece no celular */
+.navbar__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: var(--texto);
+    cursor: pointer;
+}
+
+/* ========== HERO ========== */
+.hero {
+    padding: 56px 0 64px;
+}
+
+.hero__conteudo {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero__texto h1 {
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.hero__texto .destaque {
+    color: var(--azul);
+}
+
+.hero__texto > p {
+    max-width: 460px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--texto-suave);
+}
+
+/* bloco do quiz */
+.hero__quiz {
+    max-width: 320px;
+    margin: 40px 0 0 80px;
+    text-align: center;
+}
+
+.hero__quiz p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--texto-suave);
+    margin-bottom: 20px;
+}
+
+/* composição visual do lado direito */
+.hero__visual {
+    position: relative;
+    height: 400px;
+}
+
+.forma {
+    position: absolute;
+    border-radius: 36px;
+}
+
+/* quadrado azul girado atrás do menino */
+.forma--azul {
+    top: 50px;
+    left: 90px;
+    width: 270px;
+    height: 270px;
+    background-color: var(--azul);
+    transform: rotate(14deg);
+}
+
+/* formas azul-escuras */
+.forma--escura-esq {
+    top: 90px;
+    left: 0;
+    width: 240px;
+    height: 150px;
+    background-color: var(--azul-escuro);
+    transform: rotate(18deg);
+    z-index: 1;
+}
+
+.forma--escura-dir {
+    top: 190px;
+    right: 0;
+    width: 150px;
+    height: 140px;
+    background-color: var(--azul-escuro);
+    transform: rotate(18deg);
+}
+
+.hero__menino {
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+    z-index: 2;
+    height: 85%;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: bottom left;
+}
+
+/* ========== BENEFÍCIOS ========== */
+.beneficios {
+    padding: 40px 0;
+    background-color: var(--branco);
+}
+
+.beneficios__lista {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.beneficio {
+    padding: 8px 28px;
+    text-align: center;
+    border-left: 1px solid var(--borda);
+}
+
+.beneficio:first-child {
+    border-left: none;
+}
+
+.beneficio__icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    color: #0b4fe0;
+    background-color: #e8eef7;
+    border-radius: 50%;
+}
+
+.beneficio h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.beneficio p {
+    max-width: 200px;
+    margin: 0 auto;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--texto-suave);
+}
+
+/* animação de entrada (o script.js adiciona as classes) */
+.aparecer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.aparecer.visivel {
+    opacity: 1;
+    transform: none;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 900px) {
+    .navbar__toggle {
+        display: block;
+    }
+
+    /* menu vira uma lista que abre embaixo do cabeçalho */
+    .navbar__menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--branco);
+        border-bottom: 1px solid var(--borda);
+    }
+
+    .navbar__menu.aberto {
+        display: block;
+    }
+
+    .navbar__menu ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 24px 16px;
+    }
+
+    .navbar__menu a {
+        padding: 12px 0;
+        border-bottom: none;
+    }
+
+    .hero__conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__quiz {
+        margin: 40px auto 0;
+    }
+
+    .hero__visual {
+        max-width: 460px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .beneficios__lista {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 32px;
+    }
+
+    .beneficio:nth-child(3) {
+        border-left: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero__texto h1 {
+        font-size: 36px;
+    }
+
+    .beneficios__lista {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficio {
+        border-left: none;
+    }
+
+    .botao--pequeno {
+        display: none;
+    }
+}
+
+/* Integração: seção de cursos no início, seguindo a paleta do grupo. */
+.home-courses {padding:64px 0 76px; background:rgba(248,250,252,.92)}
+.home-courses h2{font-size:clamp(1.6rem,3vw,2.15rem);color:#0F172A;margin-bottom:10px}
+.home-courses .container>p{color:#475569;line-height:1.6;margin-bottom:23px}
+.home-courses__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.home-course{display:block;background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:26px 22px;transition:transform .15s,border-color .15s}
+.home-course:hover{transform:translateY(-3px);border-color:#2563EB}
+.home-course>span{display:grid;place-items:center;background:#eff6ff;color:#1E3A8A;font-weight:700;font-size:27px;border-radius:12px;width:58px;height:58px;margin-bottom:16px}
+.home-course h3{color:#0F172A;font-size:18px;margin-bottom:8px}
+.home-course p{font-size:14px;color:#475569;line-height:1.5}
+@media(max-width:768px){.home-courses__grid{grid-template-columns:1fr}.home-courses{padding:48px 0}}
