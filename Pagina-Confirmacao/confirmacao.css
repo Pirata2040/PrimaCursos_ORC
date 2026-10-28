@@ -8,15 +8,20 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    background-color: #F4F8FF;
     background-image: url(imagens/fundo-figma.png);
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Inter', sans-serif;
     color: #0F172A;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     overflow-x: hidden;
 }
 
@@ -195,6 +200,14 @@ main {
 
 /* ===== ATÉ 900px: menu dropdown e card na largura toda ===== */
 @media (max-width: 900px) {
+     body {
+        background-image: url("../Pagina-Depoimentos/imagens/imagem-fundo-mobile.png");
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        background-position: top center;
+        background-attachment: scroll;
+    }
+
     header nav {
         display: none;
         position: absolute;
@@ -218,18 +231,10 @@ main {
         border-bottom: none;
     }
 
-    a.botao-contato {
-        display: none;
-    }
-
     .botao-menu {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .logo-header {
-        height: 40px;
     }
 
     .balao1 {
@@ -254,5 +259,13 @@ main {
 @media (max-width: 520px) {
     header {
         padding: 10px 16px;
+    }
+
+    a.botao-contato {
+        display: none;
+    }
+
+    .logo-header {
+        height: 40px;
     }
 }
