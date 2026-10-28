@@ -1,24 +1,18 @@
+// ===== MENU MOBILE =====
 const botaoMenu = document.querySelector(".botao-menu");
-const botaoFechar = document.querySelector(".botao-fechar");
-const menuMobile = document.querySelector(".menu-mobile");
+const menu = document.querySelector("header nav");
 
 botaoMenu.addEventListener("click", function () {
-    menuMobile.classList.add("aberto");
+    const estaAberto = menu.classList.toggle("aberto");
+    botaoMenu.setAttribute("aria-expanded", estaAberto);
 });
 
-botaoFechar.addEventListener("click", function () {
-    menuMobile.classList.remove("aberto");
-});
 
-menuMobile.addEventListener("click", function (evento) {
-    if (evento.target === menuMobile) {
-        menuMobile.classList.remove("aberto");
-    }
-});
-
-// Integração: formulário validado. Configure PRISMA_FORM_ENDPOINT para um serviço de envio real.
-// Sem endpoint, abrimos um rascunho de e-mail. Isso NÃO significa mensagem enviada.
+/// Formulário: valida os campos e vai para a página de confirmação.
 (() => {
+
+ const PAGINA_CONFIRMACAO = '../Pagina-Confirmacao/confirmacao.html';
+
  const form=document.getElementById('prisma-formulario');
  if(!form) return;
  const aviso=document.getElementById('aviso-formulario');
@@ -38,14 +32,39 @@ menuMobile.addEventListener("click", function (evento) {
       const result=await fetch(endpoint,{method:'POST',body:data,headers:{'Accept':'application/json'}});
       if(!result.ok) throw new Error('Falha no envio');
       sessionStorage.setItem('prisma-message-sent','1');
-      window.location.href='../Pagina-Confirmacao/confirmacao.html';
+      window.location.href=PAGINA_CONFIRMACAO;
     }catch(_){aviso.textContent='Não foi possível enviar. Verifique a conexão e tente novamente.';btn.disabled=false}
     return;
   }
-  const destino='contato@prismacursos.com'; // e-mail ilustrativo presente no protótipo; validar antes de publicar
-  const assunto=encodeURIComponent('Contato Prisma Cursos - '+(form.elements.curso.value||'Informações'));
-  const corpo=encodeURIComponent('Nome: '+nome.value+'\nE-mail: '+email.value+'\nCurso: '+form.elements.curso.value+'\n\n'+mensagem.value);
-  aviso.textContent='Abrindo seu aplicativo de e-mail. Você ainda precisa enviar a mensagem por ele.';
-  window.location.href='mailto:'+destino+'?subject='+assunto+'&body='+corpo;
+  // Protótipo: sem serviço de envio configurado, só abre a confirmação.
+  sessionStorage.setItem('prisma-message-sent','1');
+  window.location.href=PAGINA_CONFIRMACAO;
  });
 })();
+
+// ===== ANIMAÇÃO DE ENTRADA (formulário e cards de contato) =====
+const elementosAnimados = document.querySelectorAll(".formulario, .canais article");
+
+// se o navegador não tiver IntersectionObserver, tudo fica visível, sem animação
+if ("IntersectionObserver" in window) {
+
+    const observador = new IntersectionObserver(function (itens) {
+        itens.forEach(function (item) {
+            if (item.isIntersecting) {
+                item.target.classList.add("visivel");
+                observador.unobserve(item.target); // anima só uma vez
+
+                // depois da animação, tira o atraso para não atrapalhar outros efeitos
+                setTimeout(function () {
+                    item.target.style.transitionDelay = "0s";
+                }, 1000);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    elementosAnimados.forEach(function (elemento, posicao) {
+        elemento.classList.add("aparecer");
+        elemento.style.transitionDelay = (posicao * 0.1) + "s";
+        observador.observe(elemento);
+    });
+}
