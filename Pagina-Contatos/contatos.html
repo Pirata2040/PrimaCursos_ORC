@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -13,7 +12,7 @@
 <body>
 <header>
 <a class="logo-link" href="../index.html"><img alt="Logo do site" class="logo-header" src="imagens/Logo Prisma Cursos.png"/></a>
-<nav>
+<nav id="menu">
 <a href="../index.html">Início</a>
 <a href="../02-quem-somos/index.html">Quem somos</a>
 <a href="../03-cursos/index.html">Cursos</a>
@@ -21,23 +20,8 @@
 <a class="contatos-header" href="../Pagina-Contatos/contatos.html">Contato</a>
 </nav>
 <a class="botao-contato" href="../Pagina-Contatos/contatos.html" role="link">Contato</a>
-<button aria-label="Abrir menu" class="botao-menu">☰</button>
+<button aria-label="Abrir menu" aria-controls="menu" aria-expanded="false" class="botao-menu">☰</button>
 </header>
-<div class="menu-mobile">
-<div class="menu-card">
-<div class="menu-topo">
-<span class="menu-titulo">Navegação</span>
-<button class="botao-fechar">Fechar ×</button>
-</div>
-<div class="menu-links">
-<a href="../index.html">Início</a>
-<a href="../02-quem-somos/index.html">Quem Somos</a>
-<a href="../03-cursos/index.html">Cursos</a>
-<a href="../Pagina-Depoimentos/depoimentos.html">Depoimentos</a>
-<a href="../Pagina-Contatos/contatos.html">Contato</a>
-</div>
-</div>
-</div>
 <main>
 <section>
 <div class="conjuntotexto">
@@ -53,8 +37,8 @@
 <li>✓ Online e presencial</li>
 </ul>
 </div>
-<img alt="imagem depoimentos" class="imagem-contatos" src="imagens/imagem-contatos-melhorada.png">
-</img></section>
+<img alt="imagem depoimentos" class="imagem-contatos" src="imagens/imagem-contatos-melhorada.png"/>
+</section>
 <div class="conjunto2">
 <p class="titulo2">FALE CONOSCO</p>
 <h2>Envie sua mensagem</h2>
@@ -86,7 +70,7 @@
 <label for="mensagem">Mensagem</label>
 <textarea class="mensagem" id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required="required"></textarea>
 <button class="botao-mensagem">Enviar Mensagem</button>
-<p aria-live="polite" class="aviso-formulario" id="aviso-formulario" role="status"></p><p class="nota-envio">Neste protótipo estático, o envio abre seu aplicativo de e-mail. Confirme o envio nele para que a mensagem seja realmente transmitida.</p></form>
+<p aria-live="polite" class="aviso-formulario" id="aviso-formulario" role="status"></p><p class="nota-envio"></p></form>
 <div class="canais">
 <article>
 <div class="balao-canal">
