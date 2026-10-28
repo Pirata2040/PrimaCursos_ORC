@@ -13,7 +13,7 @@
   scroll-margin-top: 90px;
   padding: 72px 20px;
   background-color: var(--pcq-soft);
-  background-image: url('../01-homepage/assets/POSSÍVEL-FUNDO.png'), linear-gradient(135deg,#F8FAFC,#edf5ff);
+  background-image: url('../01-homepage/assets/fundo-figma.png'), linear-gradient(135deg,#F8FAFC,#edf5ff);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

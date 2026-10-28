@@ -23,7 +23,7 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     color: var(--texto);
     background-color: #f4f8ff;
-    background-image: url("assets/POSSÍVEL-FUNDO.png");
+    background-image: url("assets/fundo-figma.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -302,6 +302,15 @@ h1, h2, h3 {
 
 /* ========== RESPONSIVO ========== */
 @media (max-width: 900px) {
+    
+    body {
+        background-image: url("../Pagina-Depoimentos/imagens/imagem-fundo-mobile.png");
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        background-position: top center;
+        background-attachment: scroll;
+    }
+
     .navbar__toggle {
         display: block;
     }
@@ -355,6 +364,7 @@ h1, h2, h3 {
         border-left: none;
     }
 }
+
 
 @media (max-width: 520px) {
     .hero__texto h1 {

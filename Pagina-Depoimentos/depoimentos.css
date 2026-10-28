@@ -8,12 +8,20 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    background-color: #F4F8FF;
     background-image: url(imagens/fundo-figma.png);
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Inter', sans-serif;
     color: #0F172A;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -276,6 +284,14 @@ button.ponto.ativo {
 
 /*ATÉ 900px: menu dropdown, uma coluna e carrossel*/
 @media (max-width: 900px) {
+    body {
+        background-image: url(imagens/imagem-fundo-mobile.png);
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        background-position: top center;
+        background-attachment: scroll;
+    }
+
     header nav {
         display: none;
         position: absolute;
@@ -299,18 +315,10 @@ button.ponto.ativo {
         border-bottom: none;
     }
 
-    a.botao-contato {
-        display: none;
-    }
-
     .botao-menu {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .logo-header {
-        height: 40px;
     }
 
     section {
@@ -399,5 +407,13 @@ button.ponto.ativo {
 @media (max-width: 520px) {
     header {
         padding: 10px 16px;
+    }
+
+    a.botao-contato {
+        display: none;
+    }
+
+    .logo-header {
+        height: 40px;
     }
 }
